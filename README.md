@@ -1,4 +1,4 @@
-# ⚡ PIPELINE-REALTIME-STREAMING — IoT Device Data Streaming & Analytics  
+# PIPELINE-REALTIME-STREAMING — IoT Device Data Streaming & Analytics  
 
 ## 📖 Overview  
 This project implements a real-time data streaming pipeline that collects and processes IoT device data through a full chain of technologies:  
@@ -11,7 +11,7 @@ Finally, the data is visualized in a **live Power BI dashboard** for monitoring 
 
 ## 🧩 System Architecture  
 
-```text
+
 +-------------+       +-----------+        +------------------+        +----------------+
 |  IoT Device | --->  |   Kafka   | --->   | Spark Structured  | --->  |  PostgreSQL DB |
 | (JSON Data) |       |  Producer |        |     Streaming     |       | (Data Storage) |
@@ -22,9 +22,7 @@ Finally, the data is visualized in a **live Power BI dashboard** for monitoring 
                                                                 | Power BI Live |
                                                                 |  Dashboard    |
                                                                 +---------------+
-📁 Project Structure — PIPELINE-REALTIME-STREAMING
-
-PIPELINE-REALTIME-STREAMING/
+## 📁 PIPELINE-REALTIME-STREAMING/
 ├── checkpoint_dir_kafka/         # Spark Streaming checkpoint directory
 ├── devices/                      # Simulated IoT devices and data samples
 │   ├── device_01.json
@@ -42,8 +40,7 @@ PIPELINE-REALTIME-STREAMING/
 ├── spark_streaming.ipynb         # Spark Streaming job: consume, transform & store
 ├── .gitignore
 └── README.md
-
-💾 Example Input (Kafka JSON Event)
+## 💾 Example Input (Kafka JSON Event)
 {
   "eventId": "e3cb26d3-41b2-49a2-84f3-0156ed8d7502",
   "eventOffset": 10001,
@@ -88,7 +85,7 @@ temperature and measure capture IoT sensor readings.
 
 The pipeline flattens nested JSON (data.devices) into row-level records per device.
 
-⚙️ Components Description
+## ⚙️ Components Description
 1️⃣ Kafka Layer (Data Ingestion)
 
 Located in: /kafka/
@@ -139,7 +136,7 @@ Average temperature by device
 
 Real-time stream refresh
 
-🧠 Example Workflow
+## 🧠 Example Workflow
 
 Producer: device_events.py simulates IoT data and pushes JSON to Kafka.
 
@@ -185,11 +182,11 @@ Connect to PostgreSQL → table iot_device_events
 
 Refresh dashboard in real-time.
 
-🚀 Key Features
+## 🚀 Key Features
 
 ✅ Real-time data ingestion with Apache Kafka ✅ Fault-tolerant, scalable stream processing using Spark Structured Streaming ✅ Reliable persistence using PostgreSQL JDBC ✅ Real-time dashboard visualization in Power BI ✅ Support for late data handling and checkpointing ✅ Modular codebase for easy extension to new device types
 
-🧠 Future Improvements
+## 🧠 Future Improvements
 
 Integrate machine learning anomaly detection models in Spark.
 
@@ -199,6 +196,6 @@ Add Grafana dashboard for alternative visualization.
 
 Implement REST API for querying latest device status.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Hoàng Minh Hải - minhhaiit1k68@gmail.com
