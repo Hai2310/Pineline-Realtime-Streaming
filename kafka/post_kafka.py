@@ -19,7 +19,7 @@ if __name__ == "__main__" :
     offset = 10000 
     while True :
         post_kafka(bytes(str(generate_events(offset = offset)) , 'utf-8'))
-        time.sleep(rd.randint(1,6))
+        time.sleep(rd.randint(1,2))
         offset+=1
 
 

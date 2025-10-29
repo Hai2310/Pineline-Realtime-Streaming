@@ -11,12 +11,12 @@ def generate_events(offset = 0) :
         'customerId' : rd.choice(customer_id) ,
         'data' : { 'devices' : [
                 { 
-                    'deviceId' : rd.choice('device_ID') ,
+                    'deviceId' : rd.choice(device_ID) ,
                     'measure' : 'C' ,
                     'status' : rd.choice(event_status) ,
                     'temperature' : rd.randint(0 , 50)
                 }
-                for i in range(rd.randint(1,5))
+                for i in range(rd.randint(1,10))
             ] ,
         } ,
         'eventId' : str(uuid.uuid4()) ,
