@@ -10,8 +10,7 @@ Finally, the data is visualized in a **live Power BI dashboard** for monitoring 
 ---
 
 ## 🧩 System Architecture  
-
-
+```text
 +-------------+       +-----------+        +------------------+        +----------------+
 |  IoT Device | --->  |   Kafka   | --->   | Spark Structured  | --->  |  PostgreSQL DB |
 | (JSON Data) |       |  Producer |        |     Streaming     |       | (Data Storage) |
@@ -22,7 +21,10 @@ Finally, the data is visualized in a **live Power BI dashboard** for monitoring 
                                                                 | Power BI Live |
                                                                 |  Dashboard    |
                                                                 +---------------+
-## 📁 PIPELINE-REALTIME-STREAMING/
+
+```
+## 📁 PIPELINE-REALTIME-STREAMING
+```text
 ├── checkpoint_dir_kafka/         # Spark Streaming checkpoint directory
 ├── devices/                      # Simulated IoT devices and data samples
 │   ├── device_01.json
@@ -84,7 +86,7 @@ eventId uniquely identifies each event (UUID).
 temperature and measure capture IoT sensor readings.
 
 The pipeline flattens nested JSON (data.devices) into row-level records per device.
-
+```
 ## ⚙️ Components Description
 1️⃣ Kafka Layer (Data Ingestion)
 
